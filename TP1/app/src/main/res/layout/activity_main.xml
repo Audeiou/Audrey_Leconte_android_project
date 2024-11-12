@@ -146,7 +146,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/buttonPlus"
+                android:id="@+id/plusButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+" />
@@ -158,7 +158,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/buttonMoins"
+                android:id="@+id/minusButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-" />
@@ -169,7 +169,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/buttonFois"
+                android:id="@+id/timesButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x" />
@@ -180,23 +180,76 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/buttonDivise"
+                android:id="@+id/divideButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\u00F7" />
+                android:text="/" />
         </TableRow>
     </TableLayout>
 
     <TextView
-        android:id="@+id/operation"
+        android:id="@+id/operations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="number"
+        android:text="operations"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="resultat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.591" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonErase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Effacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
