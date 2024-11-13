@@ -188,10 +188,10 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/operations"
+        android:id="@+id/formula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="operations"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
@@ -203,7 +203,7 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="resultat"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -212,7 +212,7 @@
         app:layout_constraintVertical_bias="0.591" />
 
     <Button
-        android:id="@+id/buttonEqual"
+        android:id="@+id/equalButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="="
@@ -225,7 +225,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/buttonErase"
+        android:id="@+id/eraseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Effacer"
