@@ -2,6 +2,8 @@ package fr.ensicaen.tp1;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -23,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     int numberClickCounterLeftOperand = 0;
     int numberClickCounterRightOperand = 0;
+    //int[] candyPackages = {0, 0, 0, 0};  // 1, 5, 10, 50 paquets bonbons !!!!!!!!!!!!!!!
 
     private Button number0, number1, number2, number3, number4, number5, number6, number7, number8, number9;
     private Button plus, minus, equal, erase, exit;
     private TextView resultText, leftOperandText, rightOperandText, operationText;
+    //private LinearLayout resultCandy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         erase = findViewById(R.id.eraseButton);
         exit = findViewById(R.id.exitButton);
 
+        //resultCandy = findViewById(R.id.resultPictures);
         resultText = findViewById(R.id.result);
         leftOperandText = findViewById(R.id.leftOperand);
         rightOperandText = findViewById(R.id.rightOperand);
@@ -115,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
             String formula = leftOperandText.getText().toString() + operationText.getText().toString() + rightOperandText.getText().toString();
             Expression expression = new ExpressionBuilder(formula).build();
             double result = expression.evaluate();
+            //resultNumberCandyPackages(result);
+            //displayResultWithCandies();
+
             String resultString = String.valueOf(result);
             resultText.setText(resultString);
         });
@@ -129,8 +137,10 @@ public class MainActivity extends AppCompatActivity {
 
             numberClickCounterLeftOperand = 0;
             numberClickCounterRightOperand = 0;
+            //candyPackages = new int[]{0, 0, 0, 0};
 
             activateNumberButtons(numbers);
+            //removeAllPictures();
         });
     }
 
@@ -149,6 +159,46 @@ public class MainActivity extends AppCompatActivity {
             button.setEnabled(true);
         }
     }
+
+//    private void resultNumberCandyPackages(double result) {    // Pb MOINS !!!!!!!!!!!!!!!!!!!!!!!!!!
+//        int resultCandy = (int) result;
+//
+//        candyPackages[3] = resultCandy / 50;
+//        resultCandy %= 50;
+//
+//        candyPackages[2] = resultCandy / 10;
+//        resultCandy %= 10;
+//
+//        candyPackages[1] = resultCandy / 5;
+//        resultCandy %= 5;
+//
+//        candyPackages[0] = resultCandy;
+//    }
+//
+//    private void displayPicture(int drawableId) {
+//        ImageView imageview = new ImageView(this);
+//        imageview.setImageResource(drawableId);
+//
+//        //resultCandy.addView(imageview);
+//    }
+//
+//    private void removeAllPictures() {
+//        //resultCandy.removeAllViews();
+//    }
+//
+//    private void displayResultWithCandies() {
+//        displaySamePictureMultipleTimes(R.drawable.candy1, candyPackages[0]);
+//        displaySamePictureMultipleTimes(R.drawable.candies5, candyPackages[1]);
+//        displaySamePictureMultipleTimes(R.drawable.candies10, candyPackages[2]);
+//        displaySamePictureMultipleTimes(R.drawable.candies50, candyPackages[3]);
+//    }
+//
+//    private void displaySamePictureMultipleTimes(int drawableId, int times) {
+//        for (int i = 0; i < times; i++) {
+//            displayPicture(drawableId);
+//        }
+//    }
+
 
 
 }
