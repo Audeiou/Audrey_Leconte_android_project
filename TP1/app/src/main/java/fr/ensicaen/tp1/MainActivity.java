@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int[] candyPackages = {0, 0, 0, 0};  // 1, 5, 10, 50 paquets bonbons !!!!!!!!!!!!!!!
 
     private Button number0, number1, number2, number3, number4, number5, number6, number7, number8, number9;
-    private Button plus, minus, equal, erase, exit;
+    private Button plus, equal, erase, exit;
     private TextView leftOperandText, rightOperandText, operationText;
     private GridLayout resultCandy;
 
@@ -48,10 +48,9 @@ public class MainActivity extends AppCompatActivity {
         initView();
 
         Button[] numbers = {number0, number1, number2, number3, number4, number5, number6, number7, number8, number9};
-        Button[] operations = {plus, minus};
 
         setNumberButtons(numbers);
-        setOperationButtons(operations);
+        setOperationButton(plus, numbers);
         setEqualButton();
         setEraseButton(numbers);
         setExitButton();
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         number9 = findViewById(R.id.button9);
 
         plus = findViewById(R.id.plusButton);
-        minus = findViewById(R.id.minusButton);
 
         equal = findViewById(R.id.equalButton);
         erase = findViewById(R.id.eraseButton);
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     numberClickCounterLeftOperand++;
                 }
-                else if (numberClickCounterRightOperand != 2) {
+                else if (numberClickCounterRightOperand != 2 && numberClickCounterOperation != 0) {
                     if (!rightOperandText.getText().toString().equals("0")) {
                         rightOperandText.setText(rightOperandText.getText().toString() + button.getText().toString());
                     } else {
@@ -108,29 +106,32 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setOperationButtons(Button[] operations) {
-        for (Button button : operations) {
-            button.setOnClickListener(view -> {
-                operationText.setText(button.getText().toString());
-                numberClickCounterOperation++;
-            });
-        }
+    private void setOperationButton(Button operation, Button[] numbers) {
+        operation.setOnClickListener(view -> {
+            operationText.setText(operation.getText().toString());
+            numberClickCounterOperation++;
+            if (numberClickCounterRightOperand != 2) {
+                activateNumberButtons(numbers);
+            }
+        });
     }
 
     private void setEqualButton() {
         equal.setOnClickListener( view -> {
-            String formula = leftOperandText.getText().toString() + operationText.getText().toString() + rightOperandText.getText().toString();
-            Expression expression = new ExpressionBuilder(formula).build();
-            double result = expression.evaluate();
-            resultNumberCandyPackages(result);
-            displayResultWithCandies();
+            if (!operationText.getText().toString().equals("..")) {
+                String formula = leftOperandText.getText().toString() + operationText.getText().toString() + rightOperandText.getText().toString();
+                Expression expression = new ExpressionBuilder(formula).build();
+                double result = expression.evaluate();
+                resultNumberCandyPackages(result);
+                displayResultWithCandies();
+            }
         });
     }
 
     private void setEraseButton(Button[] numbers) {
         erase.setOnClickListener( view -> {
             leftOperandText.setText("0");
-            operationText.setText("+");
+            operationText.setText("..");
             rightOperandText.setText("0");
 
             numberClickCounterLeftOperand = 0;
@@ -192,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayResultWithCandies() {
+        removeAllPictures();
         displaySamePictureMultipleTimes(R.drawable.candies50, candyPackages[3]);
         displaySamePictureMultipleTimes(R.drawable.candies10, candyPackages[2]);
         displaySamePictureMultipleTimes(R.drawable.candies5, candyPackages[1]);
