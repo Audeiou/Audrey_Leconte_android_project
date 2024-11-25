@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import fr.ensicaen.tp1.view.MainActivity;
+
 public class MainActivityHomePage extends AppCompatActivity {
 
     private Button debut;
