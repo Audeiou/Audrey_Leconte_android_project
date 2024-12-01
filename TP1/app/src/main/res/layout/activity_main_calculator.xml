@@ -5,19 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivityCalculator">
 
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="267dp"
         android:layout_height="207dp"
+        android:contentDescription="@string/buttons_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865">
+        app:layout_constraintVertical_bias="0.862">
 
         <TableRow
             android:layout_width="match_parent"
@@ -25,33 +25,33 @@
 
             <Button
                 android:id="@+id/button0"
-                android:layout_width="63dp"
-                android:layout_height="match_parent"
-                android:text="0" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_0_description"
+                android:text="@string/button_0"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_1_description"
+                android:text="@string/button_1"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_2_description"
+                android:text="@string/button_2"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
         </TableRow>
 
@@ -63,31 +63,31 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_3_description"
+                android:text="@string/button_3"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_4_description"
+                android:text="@string/button_4"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_5_description"
+                android:text="@string/button_5"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -98,31 +98,31 @@
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_6_description"
+                android:text="@string/button_6"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_7_description"
+                android:text="@string/button_7"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_8_description"
+                android:text="@string/button_8"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -133,19 +133,33 @@
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9" />
+                android:backgroundTint="@color/button_color"
+                android:contentDescription="@string/button_9_description"
+                android:text="@string/button_9"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/plusButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:backgroundTint="@color/button_equal_and_plus"
+                android:contentDescription="@string/button_plus_description"
+                android:text="@string/button_plus"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/equalButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="=" />
+                android:backgroundTint="@color/button_equal_and_plus"
+                android:contentDescription="@string/button_equal_description"
+                android:text="@string/button_equal"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="ButtonStyle" />
 
         </TableRow>
     </TableLayout>
@@ -159,7 +173,7 @@
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/zero"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -177,7 +191,7 @@
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text=".."
+        android:text="@string/empty"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -195,7 +209,7 @@
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/zero"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -206,9 +220,13 @@
 
     <Button
         android:id="@+id/eraseButton"
-        android:layout_width="96dp"
-        android:layout_height="54dp"
-        android:text="Effacer"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/button_exit_and_erase"
+        android:text="@string/button_erase"
+        android:contentDescription="@string/button_erase_description"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
@@ -221,14 +239,18 @@
         android:id="@+id/exitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu"
+        android:text="@string/button_exit"
+        android:contentDescription="@string/button_exit_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.031"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/button_exit_and_erase"
+        android:textSize="18sp"/>
 
     <GridLayout
         android:id="@+id/resultPictures"
@@ -252,6 +274,7 @@
         android:id="@+id/imageView"
         android:layout_width="128dp"
         android:layout_height="161dp"
+        android:contentDescription="@string/candies_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

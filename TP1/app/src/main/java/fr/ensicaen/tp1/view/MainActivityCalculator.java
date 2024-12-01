@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -19,7 +20,7 @@ import fr.ensicaen.tp1.presenter.CalculatorPresenter;
 import fr.ensicaen.tp1.presenter.IPresenter;
 
 
-public class MainActivity extends AppCompatActivity implements IPresenter {
+public class MainActivityCalculator extends AppCompatActivity implements IPresenter {
 
     private Button number0, number1, number2, number3, number4, number5, number6, number7, number8, number9;
     private Button plus, equal, erase, exit;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements IPresenter {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_calculator);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -119,12 +120,14 @@ public class MainActivity extends AppCompatActivity implements IPresenter {
     public void disableNumberButtons() {
         for (Button button : numbers) {
             button.setEnabled(false);
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.grey));
         }
     }
 
     public void activateNumberButtons() {
         for (Button button : numbers) {
             button.setEnabled(true);
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.button_color));
         }
     }
 

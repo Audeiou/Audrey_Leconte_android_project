@@ -1,3 +1,47 @@
 <resources>
-    <string name="app_name">TP1</string>
+    <string name="app_name">Audrey_Leconte_project</string>
+
+    <string name="calculator_button_text">Calculatrice</string>
+    <string name="quiz_button_text">Question du jour</string>
+
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+
+    <string name="button_plus">+</string>
+    <string name="button_equal">=</string>
+    <string name="empty">..</string>
+    <string name="zero">0</string>
+
+    <string name="button_erase">Effacer</string>
+    <string name="button_exit">Menu</string>
+
+    <string name="button_0_description">Bouton représentant le chiffre zéro</string>
+    <string name="button_1_description">Bouton représentant le chiffre un</string>
+    <string name="button_2_description">Bouton représentant le chiffre deux</string>
+    <string name="button_3_description">Bouton représentant le chiffre trois</string>
+    <string name="button_4_description">Bouton représentant le chiffre quatre</string>
+    <string name="button_5_description">Bouton représentant le chiffre cinq</string>
+    <string name="button_6_description">Bouton représentant le chiffre six</string>
+    <string name="button_7_description">Bouton représentant le chiffre sept</string>
+    <string name="button_8_description">Bouton représentant le chiffre huit</string>
+    <string name="button_9_description">Bouton représentant le chiffre neuf</string>
+
+    <string name="button_plus_description">Bouton représentant le signe plus</string>
+    <string name="button_equal_description">Bouton représentant le signe égal</string>
+    <string name="button_erase_description">Bouton pour effacer</string>
+    <string name="button_exit_description">Bouton pour retourner au menu</string>
+    <string name="buttons_description">Boutons</string>
+    <string name="candies_description">Légende pour les bonbons</string>
+
+    <string name="button_calculator_description">Bouton pour la calculatrice</string>
+    <string name="button_quiz_description">Bouton pour la question du jour</string>
+
 </resources>

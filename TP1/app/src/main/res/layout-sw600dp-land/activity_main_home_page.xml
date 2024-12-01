@@ -5,34 +5,36 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_page_vertical_background"
+    android:background="@drawable/home_page_background"
     tools:context=".MainActivityHomePage">
 
     <Button
         android:id="@+id/calculatorButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calculator_button_text"
+        android:layout_width="228dp"
+        android:layout_height="78dp"
         android:backgroundTint="@color/button_color"
         android:contentDescription="@string/button_calculator_description"
+        android:text="@string/calculator_button_text"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <Button
         android:id="@+id/quizButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/quiz_button_text"
-        android:contentDescription="@string/button_quiz_description"
+        android:layout_width="228dp"
+        android:layout_height="78dp"
         android:backgroundTint="@color/button_color"
+        android:contentDescription="@string/button_quiz_description"
+        android:text="@string/quiz_button_text"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539" />
+        app:layout_constraintVertical_bias="0.475" />
 </androidx.constraintlayout.widget.ConstraintLayout>
