@@ -2,7 +2,7 @@
     <string name="app_name">Audrey_Leconte_project</string>
 
     <string name="calculator_button_text">Calculatrice</string>
-    <string name="quiz_button_text">Question du jour</string>
+    <string name="quiz_button_text">Quiz</string>
 
     <string name="button_0">0</string>
     <string name="button_1">1</string>
@@ -42,6 +42,9 @@
     <string name="candies_description">Légende pour les bonbons</string>
 
     <string name="button_calculator_description">Bouton pour la calculatrice</string>
-    <string name="button_quiz_description">Bouton pour la question du jour</string>
+    <string name="button_quiz_description">Bouton pour quiz</string>
+    <string name="quiz_picture_description">Image de décoration</string>
+
+    <string name="quizQuestion">"Question</string>
 
 </resources>
