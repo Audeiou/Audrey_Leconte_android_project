@@ -266,8 +266,8 @@
 
     <GridLayout
         android:id="@+id/resultPictures"
-        android:layout_width="538dp"
-        android:layout_height="240dp"
+        android:layout_width="483dp"
+        android:layout_height="229dp"
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:background="@drawable/gridlayout_black_border"
