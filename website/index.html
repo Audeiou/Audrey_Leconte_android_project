@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Audrey Leconte"/>
+  <meta name="description" content="Rapport d'Audrey Leconte"/> 
+  <title>Rapport d'Audrey Leconte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rapport d'Audrey Leconte</h1>
+    </header>
+
+    <section>
+        <div class="photo">
+            <img src="candy_maths_icon.png">
+        </div>
+        <div class="presentation">
+            <p id="pres"> Mon application Candy Maths est destinée aux enfants en classe de CP 
+                pour l'apprentissage des additions. 
+                Pour faciliter la visualisation des nombres et rendre plus ludique les mathématiques, 
+                la calculatrice affiche le résultat à l'aide de paquets de bonbons. 
+                Pour inciter les enfants à se servir régulièremment de l'application, 
+                un quiz y est intégré, proposant des questions de culture générale.
+                  </p>
+        </div>
+    </section>
+    <section id="flou">
+        <div class="principesUX">
+            <h2>Principes UX - Joel Marsh</h2>
+            <p> Pour la calculatrice, le résultat est affiché à l'aide de bonbons colorés. 
+                J'ai suivi les conseils de l'article <i> Colour </i> de Joel Marsh (<a href="https://www.joelmarsh.com/articles/daily-ux-crash-course-13-of-31">lien vers article</a>). 
+            Ainsi, plus le bonbon est foncé, plus il représente un grand nombre de bonbons.</p>
+            <div class="images">
+                <img id="legvert" src="candies_vertical.png" alt="légende bonbon verticale">
+            </div>
+        </div>
+        <div class="presentationInnovation">
+            <h2>Presentation innovation</h2>
+            <p> L'innovation de cette application est l'affichage du résultat d'une addition à l'aide de bonbons.
+                La visualisation et la compréhension des nombres peuvent être difficiles pour des enfants. 
+                Cette calculatrice leur permet donc de mieux appréhender les additions et de façon plus ludique. 
+                De plus, le quiz intégré à cette application leur permet d'améliorer leur culture générale 
+                tout en les incitant à revenir régulièremment s'entraîner. 
+                En effet, le quiz propose une question différente à chaque ouverture de l'application.
+            </p>
+        </div>
+        <div class="nommageTests">
+            <h2>Nommage des tests</h2>
+            <p> Pour nommer mes tests, j'ai suivi la méthode décrite dans le document <i>Tests unitaires en Java avec JUnit 5</i> 
+                disponible dans le cours de Génie logiciel et patrons de conception sur Moodle.
+                J'ai donc utilisé la notation snake_case et le patron should-when : should_ComportementAttendu_when_EtatTesté.</p>
+        </div>
+        <div class="effortFonctionnel">
+            <h2>Effort fonctionnel pour les tests</h2>
+            <p> Pour le modèle de ma calculatrice, j'utilise la libairie <i>exp4j</i>. 
+                J'ai donc réalisé différents tests sur cette librairie :
+                <ul>
+                    <li> tests des opérations de base (+, -, /, *, %)</li>
+                    <li> tests de calculs avec des variables </li>
+                    <li> tests avec des fonctions mathématiques </li>
+                    <li> tests avec des multiplications implicites </li>
+                    <li> tests avec des constantes numériques </li>
+                    <li> tests avec des fonctions personnalisées </li>
+                    <li> tests avec une division par zéro </li>
+                    <li> tests pour vérifier la validité d'une expression.</li>
+                </ul> 
+            </p>
+        </div>
+        <div class="technique">
+            <h2>Technique de tests avancée</h2>
+            <p> J'ai généré un <i>test coverage report</i> en activant le plugin JaCoCo. 
+            Le <i>test coverage report</i> correspond au fichier
+            app/build/reports/tests/testDebugUnitTest/index.html.
+             <div class="images">
+                <img id="report" src="testcov.jpg" alt="test coverage report">
+            </div>
+        </p>
+        </div>
+        <div class="responsive">
+            <h2>Responsive</h2>
+            <p> Mon application est responsive puisqu'elle peut être
+                utilisée sur tablette comme sur téléphone. 
+                Pour ce faire, pour chaque activité (page d'accueil, calculatrice et quiz), 
+                il y a deux fichiers .xml pour les téléphones et deux pour les tablettes (sw600dp).
+            </p>
+            <div class="images">
+                <img id="xml" src="xml.jpg" alt="fichiers xml">
+                <figure>
+                    <img src="tabvertcalcul.jpg" alt="tablette calculatrice verticale">
+                    <figcaption>Calculatrice pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="telcalculvert.jpg" alt="telephone calculatrice verticale">
+                    <figcaption>Calculatrice pour téléphone</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="vertHor">
+            <h2>Vertical - Horizontal</h2>
+            <p> Mon application peut s'utiliser à l'horizontale comme à la verticale.
+                Pour chaque activité (page d'accueil, calculatrice et quiz), pour chaque type de support (téléphone, tablette), 
+                il y a un fichier .xml pour la version horizontale (land) et un fichier .xml pour la version verticale.  
+            </p>
+            <div class="images">
+                <figure>
+                    <img src="tabhorizhomepage.jpg" alt="tablette homepage horizontale">
+                    <figcaption>Page d'accueil horizontale pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="tabverthomepage.jpg" alt="tablette homepage verticale">
+                    <figcaption>Page d'accueil verticale pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="tabhorizcalcul.jpg" alt="tablette calculatrice horizontale">
+                    <figcaption>Calculatrice horizontale pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="tabvertcalcul.jpg" alt="tablette calculatrice verticale">
+                    <figcaption>Calculatrice veticale pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="tabquizhoriz.jpg" alt="tablette quiz horizontal">
+                    <figcaption>Quiz horizontal pour tablette</figcaption>
+                </figure>
+                <figure>
+                    <img src="tabquizvert.jpg" alt="tablette quiz vertical">
+                    <figcaption>Quiz vertical pour tablette</figcaption>
+                </figure>
+
+            </div>
+        </div>
+        <div class="crashPas">
+            <h2>Ne crash pas</h2>
+            <p> L'application ne crash pas. Tout marche sans problème. 
+                Voici un gif montrant le démarrage de l'application et la calculatrice.
+                (Le gif ne va pas plus loin dans l'utilisation de la calculatrice et dans la présentation de l'application 
+                car sinon la qualité du gif ne serait vraiment pas bonne.) 
+            </p>
+            <div class="images">
+                <img id="gif" src="giphy(2).gif" alt="gif">
+            </div>
+        </div>
+        <div class="installation">
+            <h2>Installation sur téléphone et tablette</h2>
+            <p> J'ai installé mon application sur mon téléphone et sur ma tablette.
+            </p>
+            <div class="images">
+                <figure>
+                    <img src="preuve_tel.jpg" alt="installation telephone">
+                    <figcaption>Installation sur mon téléphone</figcaption>
+                </figure>
+                <figure>
+                    <img src="instatabl.jpg" alt="installation tablette">
+                    <figcaption>Installation sur ma tablette</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="res">
+            <h2>Ressources pour constantes</h2>
+            <p> Les fichiers correspondant à mes ressources pour mes constantes sont :
+                <ul>
+                    <li> colors.xml : pour les couleurs de mon application</li>
+                    <li> strings.xml : pour les textes des boutons et les descriptions des éléments.</li>
+                </ul> 
+            </p>
+            <div class="images">
+                <img src="constantes.jpg" alt="fichiers constantes">    
+            </div>
+        </div>
+        <div class="layout">
+            <h2>Usage pertinent Layout</h2>
+            <p> J'ai utilisé des Layout en fonction de mes besoins : 
+                <ul>
+                    <li> TableLayout : pour organiser les boutons de ma calculatrice</li>
+                    <li> GridLayout : pour afficher plusieurs images de bonbons en fonction du résultat.</li>
+                </ul> 
+            </p>
+            <div class="images">
+                <figure>
+                    <img src="tablelayout.jpg" alt="TableLayout">
+                    <figcaption>Utilisation TableLayout</figcaption>
+                </figure>
+                <figure>
+                    <img src="gridlayout.jpg" alt="GridLayout">
+                    <figcaption>Utilisation GridLayout</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="volley">
+            <h2>Volley</h2>
+            <p> Je me suis servie de la bibliothèque <i>Volley</i> pour effectuer des requêtes avec mon API.
+            </p>
+            <div class="images">
+                <img src="volley.jpg" alt="Volley">    
+            </div>
+        </div>
+        <div class="json">
+            <h2>JSON</h2>
+            <p> Les réponses fournies par mon API sont au format JSON (<a href="https://quizzapi.jomoreschi.fr/api/v1/quiz?limit=5&category=culture_generale&difficulty=facile">exemple réponse API</a>).
+                Je me suis servie de différentes classes telles que <i>JSONArray</i> et <i>JSONObject</i> pour analyser et me servir des données.
+            </p>
+            <div class="images">
+                <img src="JSON.jpg" alt="JSON">    
+            </div>
+        </div>
+        <div class="configCICD">
+            <h2>Config CICD (main forcee)</h2>
+            <p>  J'ai créé un pipeline sur GitHub en ajoutant un fichier .yml dans le dossier .github/workflows/ de mon projet.
+            </p>
+            <div class="images">
+                <img src="pipeline.jpg" alt="pipeline">    
+            </div>
+        </div>
+        <div class="recherches">
+            <h2>Recherches personnelles</h2>
+            <p> Dans un premier temps, j'ai effectué des recherches 
+                sur le travail et les besoins des enfants en classe de CP.
+                J'ai ensuite choisi de créer une calculatrice avec des bonbons pour aider les enfants à se représenter les nombres.
+                J'ai également effectué beaucoup de recherches pour trouver une API, car la plupart étaient soit en anglais, soit payantes, soit inadaptées.
+                J'ai cherché des PNG pour assembler et créer mes images de légendes et de fonds.
+                Enfin, j'ai lu plusieurs articles pour résoudre des problèmes d'implémentation, tels que ceux relatifs à l'architecture MVVM 
+                ou aux fichiers .xml pour gérer les versions horizontales et verticales des activités. </p>
+        </div>
+        <div class="MVP">
+            <h2>MVP</h2>
+            <p> Pour ma calculatrice, j'ai essayé d'implémenter l'architecture MVVM.
+                Malheureusement, malgré de nombreuses recherches et plusieurs tests d'implémentation (avec des RecyclerView et GridLayoutManager), je n'ai pas réussi à le mettre en place
+                car la gestion des images avec MVVM et mon GridLayout était trop compliquée. J'ai donc finalement implémenté l'architecture MVP. 
+            </p>
+            <div class="images">
+                <img src="mvp.jpg" alt="MVP">    
+            </div>
+        </div>
+        <div class="critiqueTravail">
+            <h2>Critique travail</h2>
+            <p> L'API utilisée pour le quiz n'est pas spécifiquement conçue pour les enfants. 
+                Les questions sont néanmoins, pour la plupart, à la portée des enfants.
+                Pour l'architecture de la calculatrice, j'aurais aimé utiliser MVVM 
+                mais je n'ai pas réussi à l'implémenter à cause de la gestion des images.</p>
+        </div>
+        <div class="github">
+            <h2>Github</h2>
+            <p> J'ai commencé mon travail avec Gitlab, mais suite à la cyberattaque de l'ENSICAEN, j'ai déplacé mon projet sur Github.
+                J'ai donc fait un github pages et mon historique des commits contient tous les commits depuis le début.
+            </p>
+            <div class="images">
+                <figure>
+                    <img src="com.jpg" alt="commits">
+                    <figcaption>Github</figcaption>
+                </figure>
+                <figure>
+                    <img src="commit.jpg" alt="exemple commits">
+                    <figcaption>Exemple de commits</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="infos">
+            <h2>Precisions sur mon travail</h2>
+            <p> Pour la calculatrice, chaque opérande dans le calcul doit être un nombre inférieur ou égal à 99. 
+                Ensuite, les boutons des chiffres deviennent gris si l'enfant doit ajouter le signe + ou si le calcul est terminé. 
+                Le résultat maximum est donc 198 bonbons. 
+                J'ai également changé le logo par défaut de mon application pour mettre celui qui se trouve tout en haut de cette page : Candy Maths. 
+                J'ai aussi ajouté des <i>contentDescription</i> pour les éléments dans mes fichiers .xml afin de permettre aux enfants 
+                ayant des déficiences visuelles de comprendre les éléments grâce aux outils d'accessibilité, comme les lecteurs d'écran.
+                Pour le quiz, lorsque l'enfant clique sur une réponse, un message apparaît pour confirmer si la réponse est correcte ou non.
+            </p>
+        </div>
+        <div class="images">
+            <figure>
+                <img src="gris.jpg" alt="gris">
+                <figcaption>Boutons désactivés</figcaption>
+            </figure>
+            <figure>
+                <img src="contentdescrip.jpg" alt="exemple commits">
+                <figcaption>Exemple de contentDescription</figcaption>
+            </figure>
+            <figure>
+                <img src="bonnerep.jpg" alt="Bonne réponse">
+                <figcaption>Bonne réponse</figcaption>
+            </figure>
+            <figure>
+                <img src="mauvrep.jpg" alt="Mauvaise réponse">
+                <figcaption>Mauvaise réponse</figcaption>
+            </figure>
+        </div>
+        
+        <a href="#" class="btn btn-default">Retour en haut ↑</a>
+    </section>
+    
+</body>
+</html>
