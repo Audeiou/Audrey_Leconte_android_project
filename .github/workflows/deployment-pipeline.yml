@@ -17,7 +17,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Make gradlew executable
-        run: chmod +x gradlew
+        run: |
+          cd TP1  
+          chmod +x gradlew
 
       - name: Install dependencies
         run: |
